@@ -15,11 +15,11 @@ public class RevList<Type> implements Iterable<Type> {
     public Iterator<Type> iterator() {
         Iterator<Type> it = new Iterator<Type>() {
 
-            private int currentIndex = currentSize;
+            public int currentIndex = currentSize - 1;
 
             @Override
             public boolean hasNext() {
-                return currentIndex >= 0 && arrayList.get(currentIndex - 1) != null;
+                return currentIndex >= 0 && arrayList.get(currentIndex) != null;
             }
 
             @Override

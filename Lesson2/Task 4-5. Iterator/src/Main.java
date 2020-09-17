@@ -38,9 +38,11 @@ public class Main //extends  MySortStr
             //int strlen = rs.size();
             //RevList<String>
             RevList<String> myList = new RevList<String>(rs);
-            while (myList.iterator().hasNext())
+
+            Iterator<String> myIter = myList.iterator();
+            while (myIter.hasNext())
             {
-                System.out.println(myList.iterator().next());
+                System.out.println(myIter.next());
             }
 
 
